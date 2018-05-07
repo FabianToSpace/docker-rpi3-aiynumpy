@@ -13,6 +13,8 @@ COPY . ./
 ENV INITSYSTEM on
 
 # pip install python deps from requirements.txt on the resin.io build server
+RUN pip install --only-binary=numpy,scipy numpy scipy
 RUN pip install -r /requirements.txt
+
 
 CMD ["echo","'No CMD command was set in Dockerfile! Details about CMD command could be found in Dockerfile Guide section in our Docs. Here's the link: http://docs.resin.io/deployment/dockerfile"]
