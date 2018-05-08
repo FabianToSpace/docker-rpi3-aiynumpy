@@ -11,7 +11,10 @@ script:
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    docker tag uptospace/rpi3-aiynumpy uptospace/rpi3-aiynumpy:3.6.5
-    docker push uptospace/rpi3-aiynumpy:3.6.5
+    docker tag uptospace/rpi3-aiynumpy uptospace/rpi3-aiynumpy:3.5.5
+    docker push uptospace/rpi3-aiynumpy:3.5.5
     docker push uptospace/rpi3-aiynumpy
+  else
+    docker tag uptospace/rpi3-aiynumpy uptospace/rpi3-aiynumpy:3.5.5
+    docker push uptospace/rpi3-aiynumpy:3.5.5
   fi

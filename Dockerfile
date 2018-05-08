@@ -1,4 +1,4 @@
-FROM uptospace/rpi3-aiyvoice:1
+FROM uptospace/rpi3-aiyvoice:3.5.5
 
 # Set our working directory
 WORKDIR /usr/app
