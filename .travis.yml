@@ -15,6 +15,7 @@ script:
     docker push uptospace/rpi3-aiynumpy:3.5.5
     docker push uptospace/rpi3-aiynumpy
   else
+    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     docker tag uptospace/rpi3-aiynumpy uptospace/rpi3-aiynumpy:3.5.5
     docker push uptospace/rpi3-aiynumpy:3.5.5
   fi
