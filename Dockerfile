@@ -3,6 +3,9 @@ FROM uptospace/rpi3-aiyvoice:1
 # Set our working directory
 WORKDIR /usr/app
 
+RUN sudo apt-get update
+RUN sudo apt-get upgrade
+
 # Copy requirements.txt first for better cache on later pushes
 COPY ./requirements.txt /requirements.txt
 
