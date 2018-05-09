@@ -12,8 +12,6 @@ COPY . ./
 # switch on systemd init system in container
 ENV INITSYSTEM on
 
-RUN apt update && apt install libatlas-base-dev python3-pip
-
 # pip install python deps from requirements.txt on the resin.io build server
 RUN pip3 install -r /requirements.txt -i https://www.piwheels.org/simple --no-cache-dir
 
